@@ -2,6 +2,7 @@
 import Entities.Address;
 import Entities.Employee;
 import Entities.MyClass;
+import business.OrderFile;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -42,7 +43,7 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) throws FileNotFoundException, IOException {
-        hasMap();
+        orderPDFFile("C:\\Users\\Marcela\\Documents\\");
     }
 
     public static void UnaryOperator() {
@@ -133,12 +134,8 @@ public class Main {
 
     }
     
-    
-    public static void ejerciciocloseable() throws Exception{
-        MyClass obj = null;
-        try (MyClass obj1 = new MyClass()){
-          
-            
-        }
-     }
+    public static void orderPDFFile(String route){
+    OrderFile orderRute = new OrderFile();
+    orderRute.execute(route);
+    }
 }
